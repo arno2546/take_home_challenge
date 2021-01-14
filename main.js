@@ -75,7 +75,7 @@ $(document).ready(function () {
 			var v2 = overLapData[i][1].name;			
 			var weight = 0;
 			for (let j = 0; j < overLapData.length; j++) {
-				if(v1 == overLapData[j][0].name && v2 == overLapData[j][1].name){
+				if((v1 == overLapData[j][0].name && v2 == overLapData[j][1].name) || (v2 == overLapData[j][0].name && v1 == overLapData[j][1].name)){
 					weight++;
 					if(weight==2){
 						overLapData.splice(j,1);
